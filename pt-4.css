@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: #000;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    
+
+}
+.blue {
+    background: #0092D5;
+}
+.red {
+    background: #fd0d05;
+}
+.green {
+    background: #04d604;
+}
+
+.card {
+    outline-offset: -10px;
+    border-radius: 200px 20px 20px 20px;
+    width: 80%;
+    height: 90%;
+    padding: 20px 0px;
+    margin: 40px auto;
+    position: relative;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 188px 20px 20px 20px;
+    box-shadow: inset 4px 4px 10px #000,
+                    inset -4px -4px 10px #999;
+}
+h3 {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    font-size: 2.5rem;
+}
+.price-value {
+    position: absolute;
+    top: -20px;
+    right: -5%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px #000;
+}
+.price-value:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 1s;
+}
+.price-value span:nth-of-type(1) {
+    font-size: 4rem;
+    z-index: 2;
+   
+}
+.price-value span:nth-of-type(2) {
+    font-size: 1.5rem;
+    z-index: 2;
+}
+.line {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 15px;
+    z-index: 1;
+    transition: 1s;
+    
+}
+.contents {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    font-size: 1.2rem;
+
+}
+.btn {
+    position: absolute;
+    bottom: 30px;
+    left: 32%;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #000;
+}
+.btn a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.card:hover .line,
+.card:hover .price-value:before,
+.btn:hover {
+    box-shadow: inset 4px 4px 10px #000,
+                    inset -4px -4px 10px #999;
+}
+@media (min-width:700px){
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 30%;
+    }
+}
